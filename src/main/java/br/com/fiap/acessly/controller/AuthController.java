@@ -15,9 +15,15 @@ import br.com.fiap.acessly.dto.LoginRequest;
 import br.com.fiap.acessly.dto.LoginResponse;
 import br.com.fiap.acessly.model.User;
 import br.com.fiap.acessly.service.TokenService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
+@Tag(name = "Authentication", description = "Endpoint para login e emissão de token JWT")
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("auth/login")
 public class AuthController {
 
     private final AuthenticationManager authenticationManager;
@@ -28,12 +34,17 @@ public class AuthController {
         this.tokenService = tokenService;
     }
 
-
-    @PostMapping("/login")
-    public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest request) {
+    @Operation(summary = "Login com email e senha", description = "Autentica o usuário e retorna um token JWT")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Token JWT gerado com sucesso e dados mínimos do usuário"),
+            @ApiResponse(responseCode = "401", description = "Email ou senha inválidos")
+    })
+    @PostMapping
+    public ResponseEntity<LoginResponse> login(
+            @Parameter(description = "Dados de login: email e senha") @RequestBody LoginRequest request) {
         try {
-            UsernamePasswordAuthenticationToken authToken =
-                new UsernamePasswordAuthenticationToken(request.email(), request.password());
+            UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(request.email(),
+                    request.password());
             Authentication authentication = authenticationManager.authenticate(authToken);
             User user = (User) authentication.getPrincipal();
             String token = tokenService.generateToken(user);
