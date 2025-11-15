@@ -130,7 +130,7 @@ A API permite:
 - 🔍 **Filtros dinâmicos**: specifications para consultas complexas
 - 📊 **Metadata de paginação**: total de elementos, páginas, etc.
 
-```
+```java
 // Exemplo de endpoint com paginação e filtros
 GET /vacancies?title=Java&city=São Paulo&page=0&size=10&sort=salary,desc
 ```
@@ -142,7 +142,7 @@ GET /vacancies?title=Java&city=São Paulo&page=0&size=10&sort=salary,desc
 - 🏷️ **Tags organizadas** por contexto de negócio
 - 🧪 **Testável**: try-it-out direto na interface
 
-Com a aplicação rodando, acesso `http://localhost:8080/swagger-ui/index.html` ou `http://localhost:8080/swagger-ui.html`
+Com a aplicação rodando, acesse `http://localhost:8080/swagger-ui/index.html` ou `http://localhost:8080/swagger-ui.html`
 
 ### ✅ Autenticação com JWT
 
@@ -722,7 +722,7 @@ Content-Type: application/json
 | PATCH /candidacies/{id}/status | ❌ | ✅ | ❌ |
 | DELETE /candidacies/{id} | ✅ | ❌ | ❌ |
 
-## 👨‍💻 Equipe
+## 👨‍💻 Dev Team
 
 | Dev | Avatar | RM |
 | ------------- | ------ | ----- |
