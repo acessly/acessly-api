@@ -297,8 +297,8 @@ Content-Type: application/json
 
 ```json
 {
-  "name": "TechInclusive Soluções Ltda",
-  "email": "contato@techinclusive.com",
+  "name": "Industrias Starks",
+  "email": "industrias@starks.com",
   "password": "senha123!",
   "userRole": "COMPANY",
   "city": "São Paulo",
@@ -312,8 +312,8 @@ Content-Type: application/json
 ```json
 {
   "id": 1,
-  "name": "TechInclusive Soluções Ltda",
-  "email": "contato@techinclusive.com",
+  "name": "Industrias Starks",
+  "email": "industrias@starks.com",
   "userRole": "COMPANY",
 ...
 }
@@ -333,8 +333,8 @@ Content-Type: application/json
 
 ```json
 {
-  "name": "Ana Costa",
-  "email": "ana.costa@email.com",
+  "name": "João Silva",
+  "email": "joao.silva@email.com",
   "password": "senha123!",
   "userRole": "CANDIDATE",
   "city": "São Paulo",
@@ -361,7 +361,7 @@ Content-Type: application/json
 
 ```json
 {
-  "email": "contato@techinclusive.com",
+  "email": "industrias@starks.com",
   "password": "senha123!"
 }
 ```
@@ -371,8 +371,8 @@ Content-Type: application/json
 ```json
 {
   "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhY2Vzc2x5LWFwaS...",
-  "email": "contato@techinclusive.com",
-  "name": "TechInclusive Soluções Ltda"
+  "email": "industrias@starks.com",
+  "name": "Industrias Starks"
 }
 ```
 
@@ -390,7 +390,7 @@ Content-Type: application/json
 
 ```json
 {
-  "email": "ana.costa@email.com",
+  "email": "joao.silva@email.com",
   "password": "senha123!"
 }
 ```
@@ -414,10 +414,10 @@ Content-Type: application/json
 ```json
 {
   "userId": 1,
-  "name": "TechInclusive Soluções",
+  "name": "Industrias Starks",
   "sector": "Tecnologia",
   "acessibilityType": "LOW",
-  "website": "https://techinclusive.com",
+  "website": "https://industriasstark.com",
   "description": "Empresa de tecnologia focada em inclusão digital e acessibilidade."
 }
 ```
@@ -515,7 +515,7 @@ Content-Type: application/json
   "companyId": 1,
   "title": "Desenvolvedor Java Pleno",
   "description": "Desenvolvimento de APIs REST com Spring Boot, microservices e cloud.",
-  "vacancyType": "REMOTE",
+  "vacancyType": "IN_PERSON",
   "city": "São Paulo",
   "state": "SP",
   "salary": 8500.00,
@@ -621,10 +621,10 @@ Content-Type: application/json
 {
   "id": 1,
   "candidateId": 1,
-  "candidateName": "Ana Costa",
+  "candidateName": "João Silva",
   "vacancyId": 1,
   "vacancyTitle": "Desenvolvedor Java Pleno",
-  "companyName": "TechInclusive Soluções",
+  "companyName": "Industrias Stark",
   "applicationDate": "2025-11-15",
   "status": "UNDER_ANALYSIS"
 }
