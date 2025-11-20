@@ -1,6 +1,7 @@
 ![Imagem](https://drive.google.com/uc?export=view&id=1_mfj4ich8mrC-_zU7Beb_NP0gbfR_QUi)
 
 ![API Rest](https://img.shields.io/badge/API%20Rest-000000?style=flat&logo=fastapi&logoColor=009688)
+![Render](https://img.shields.io/badge/Render-000000?style=flat&logo=render&logoColor=46E3B7)
 ![Java](https://img.shields.io/badge/Java-000000?style=flat&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-000000?style=flat&logo=springboot&logoColor=6DB33F)
 ![Spring Security](https://img.shields.io/badge/Spring%20Security-000000?style=flat&logo=springsecurity&logoColor=6DB33F)
@@ -721,6 +722,15 @@ Content-Type: application/json
 | GET /candidacies/vacancy/{id} | ❌ | ✅ | ❌ |
 | PATCH /candidacies/{id}/status | ❌ | ✅ | ❌ |
 | DELETE /candidacies/{id} | ✅ | ❌ | ❌ |
+
+## 🚀 Deploy on Render
+
+A API está hospedada via [Render](https://render.com).  
+> **Atenção:** Se a aplicação estiver inativa, ao acessar pode demorar cerca de **4-5 minutos** para iniciar (cold start).  
+> Acesse a documentação [Swagger UI](https://acessly-api.onrender.com/swagger-ui/index.html).
+
+[![Deploy on Render](https://img.shields.io/badge/Render-deployed-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://acessly-api.onrender.com/swagger-ui/index.html)
+[![API Status](https://img.shields.io/badge/API-Online-success?style=for-the-badge)](https://acessly-api.onrender.com/swagger-ui/index.html)
 
 ## 👨‍💻 Dev Team
 
