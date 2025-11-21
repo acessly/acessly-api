@@ -143,7 +143,7 @@ GET /vacancies?title=Java&city=São Paulo&page=0&size=10&sort=salary,desc
 - 🏷️ **Tags organizadas** por contexto de negócio
 - 🧪 **Testável**: try-it-out direto na interface
 
-Com a aplicação rodando, acesse `http://localhost:8080/swagger-ui/index.html` ou `http://localhost:8080/swagger-ui.html`
+Se a aplicação estiver rodando localmente, acesse `http://localhost:8080/swagger-ui/index.html` ou `http://localhost:8080/swagger-ui.html`
 
 ### ✅ Autenticação com JWT
 
@@ -251,7 +251,19 @@ Com a aplicação rodando, acesse `http://localhost:8080/swagger-ui/index.html` 
 
 ---
 
-## Instruções para testes
+## 🚀 Deploy on Render
+
+A API está hospedada via [Render](https://render.com).  
+> **Atenção:** Se a aplicação estiver inativa, ao acessar pode demorar cerca de **4-5 minutos** para iniciar (cold start).
+ 
+> Acesse a documentação da API hospedada no Swagger UI no link abaixo:
+
+🎓 https://acessly-api.onrender.com/swagger-ui/index.html
+
+[![Deploy on Render](https://img.shields.io/badge/Render-deployed-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://acessly-api.onrender.com/swagger-ui/index.html)
+[![API Status](https://img.shields.io/badge/API-Online-success?style=for-the-badge)](https://acessly-api.onrender.com/swagger-ui/index.html)
+
+## 👨‍🏫 Instruções para testes
 
 ### 📋 Pré-requisitos
 
@@ -282,7 +294,9 @@ spring.datasource.password=sua_senha
 mvnw spring-boot:run
 ```
 
-A API estará disponível em: `http://localhost:8080`
+A API estará disponível localmente em: `http://localhost:8080`
+
+A API estará disponível hospedada pelo Render em: `https://acessly-api.onrender.com`
 
 ## 🪢 Fluxo completo de testes
 
@@ -290,7 +304,7 @@ A API estará disponível em: `http://localhost:8080`
 
 #### 📝 1.1 Cadastrar usuário COMPANY
 
-`POST` http://localhost:8080/users
+`POST` https://acessly-api.onrender.com/users
 
 Content-Type: application/json
 
@@ -326,7 +340,7 @@ Content-Type: application/json
 
 ##### 📝 1.2 Cadastrar usuário CANDIDATE
 
-`POST` http://localhost:8080/users
+`POST` https://acessly-api.onrender.com/users
 
 Content-Type: application/json
 
@@ -354,7 +368,7 @@ Content-Type: application/json
 
 ##### 🔐 2.1 Login como COMPANY
 
-`POST` http://localhost:8080/auth/login
+`POST` https://acessly-api.onrender.com/auth/login
 
 Content-Type: application/json
 
@@ -383,7 +397,7 @@ Content-Type: application/json
 
 ##### 🔐 2.2 Login como CANDIDATE
 
-`POST` http://localhost:8080/auth/login
+`POST` https://acessly-api.onrender.com/auth/login
 
 Content-Type: application/json
 
@@ -404,7 +418,7 @@ Content-Type: application/json
 
 ##### 🏢 3.1 Cadastrar empresa (COM token COMPANY)
 
-`POST` http://localhost:8080/companies
+`POST` https://acessly-api.onrender.com/companies
 
 Authorization: Bearer `TOKEN_DA_COMPANY`
 
@@ -431,7 +445,7 @@ Content-Type: application/json
 
 ##### 🧑‍🦽 3.2 Cadastrar Candidato (COM token CANDIDATE)
 
-`POST` http://localhost:8080/candidates
+`POST` https://acessly-api.onrender.com/candidates
 
 Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
@@ -458,7 +472,7 @@ Content-Type: application/json
 
 ##### 🛠️ 4.1 Cadastrar recursos da empresa (COM token COMPANY)
 
-`POST` http://localhost:8080/company-supports
+`POST` https://acessly-api.onrender.com/company-supports
 
 Authorization: Bearer `TOKEN_DA_COMPANY`
 
@@ -480,7 +494,7 @@ Content-Type: application/json
 
 ##### 🛠️ 4.2 Cadastrar tecnologia assistiva
 
-`POST` http://localhost:8080/company-supports
+`POST` https://acessly-api.onrender.com/company-supports
 
 Authorization: Bearer `TOKEN_DA_COMPANY`
 
@@ -503,7 +517,7 @@ Content-Type: application/json
 
 ##### 💼 5.1 Cadastrar vaga remota (COM token COMPANY)
 
-`POST` http://localhost:8080/vacancies
+`POST` https://acessly-api.onrender.com/vacancies
 
 Authorization: Bearer `TOKEN_DA_COMPANY`
 
@@ -532,7 +546,7 @@ Content-Type: application/json
 
 ##### 💼 5.2 Cadastrar vaga presencial
 
-`POST` http://localhost:8080/vacancies
+`POST` https://acessly-api.onrender.com/vacancies
 
 Authorization: Bearer `TOKEN_DA_COMPANY`
 
@@ -559,7 +573,7 @@ Content-Type: application/json
 
 ##### 🔍 6.1 Listar todas as vagas (COM token CANDIDATE)
 
-`GET` http://localhost:8080/vacancies
+`GET` https://acessly-api.onrender.com/vacancies
 
 Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
@@ -567,7 +581,7 @@ Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
 ##### 🔍 6.2 Filtrar Vagas Remotas
 
-`GET` http://localhost:8080/vacancies?vacancyType=REMOTE
+`GET` https://acessly-api.onrender.com/vacancies?vacancyType=REMOTE
 
 Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
@@ -575,7 +589,7 @@ Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
 ##### 🔍 6.3 Filtrar por Cidade
 
-`GET` http://localhost:8080/vacancies?city=SãoPaulo
+`GET` https://acessly-api.onrender.com/vacancies?city=SãoPaulo
 
 Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
@@ -583,7 +597,7 @@ Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
 ##### 🔍 6.4 Filtrar por Acessibilidade Oferecida
 
-`GET` http://localhost:8080/vacancies?accessibilityOffered=rampa
+`GET` https://acessly-api.onrender.com/vacancies?accessibilityOffered=rampa
 
 Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
@@ -591,7 +605,7 @@ Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
 ##### 🔍 6.5 Combinar Filtros + Paginação + Ordenação
 
-`GET` http://localhost:8080/vacancies?vacancyType=REMOTO&city=SãoPaulo&page=0&size=10&sort=salary,desc
+`GET` https://acessly-api.onrender.com/vacancies?vacancyType=REMOTO&city=SãoPaulo&page=0&size=10&sort=salary,desc
 
 Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
@@ -601,7 +615,7 @@ Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
 ##### 📝 7.1 Candidatar-se a uma Vaga (COM token CANDIDATE)
 
-`POST` http://localhost:8080/candidacies
+`POST` https://acessly-api.onrender.com/candidacies
 
 Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
@@ -637,7 +651,7 @@ Content-Type: application/json
 
 ##### 📝 7.2 Ver Minhas Candidaturas (COM token CANDIDATE)
 
-`GET` http://localhost:8080/candidacies/candidate/1
+`GET` https://acessly-api.onrender.com/candidacies/candidate/1
 
 Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
@@ -645,7 +659,7 @@ Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
 ##### 📝 7.3 Ver Candidatos da Vaga (COM token COMPANY)
 
-`GET` http://localhost:8080/candidacies/vacancy/1
+`GET` https://acessly-api.onrender.com/candidacies/vacancy/1
 
 Authorization: Bearer `TOKEN_DA_COMPANY`
 
@@ -653,7 +667,7 @@ Authorization: Bearer `TOKEN_DA_COMPANY`
 
 ##### ✅ 7.4 Aprovar Candidatura (COM token COMPANY)
 
-`PATCH` http://localhost:8080/candidacies/1/status?status=APPROVED
+`PATCH` https://acessly-api.onrender.com/candidacies/1/status?status=APPROVED
 
 Authorization: Bearer `TOKEN_DA_COMPANY`
 
@@ -671,7 +685,7 @@ Authorization: Bearer `TOKEN_DA_COMPANY`
 
 ##### ❌ 7.5 Tentar Aprovar com Token CANDIDATE (DEVE FALHAR)
 
-`PATCH` http://localhost:8080/candidacies/1/status?status=APPROVED
+`PATCH` https://acessly-api.onrender.com/candidacies/1/status?status=APPROVED
 
 Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
@@ -683,7 +697,7 @@ Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
 ##### ❌ 8.1 Candidato tentando criar vaga (DEVE FALHAR)
 
-`POST` http://localhost:8080/vacancies
+`POST` https://acessly-api.onrender.com/vacancies
 
 Authorization: Bearer `TOKEN_DO_CANDIDATE`
 
@@ -696,7 +710,7 @@ Content-Type: application/json
 
 ##### ❌ 8.2 Empresa tentando se candidatar (DEVE FALHAR)
 
-`POST` http://localhost:8080/candidacies
+`POST` https://acessly-api.onrender.com/candidacies
 
 Authorization: Bearer `TOKEN_DA_COMPANY`
 
@@ -722,18 +736,6 @@ Content-Type: application/json
 | GET /candidacies/vacancy/{id} | ❌ | ✅ | ❌ |
 | PATCH /candidacies/{id}/status | ❌ | ✅ | ❌ |
 | DELETE /candidacies/{id} | ✅ | ❌ | ❌ |
-
-## 🚀 Deploy on Render
-
-A API está hospedada via [Render](https://render.com).  
-> **Atenção:** Se a aplicação estiver inativa, ao acessar pode demorar cerca de **4-5 minutos** para iniciar (cold start).
- 
-> Acesse a documentação da API hospedada no Swagger UI no link abaixo:
-
-🎓 https://acessly-api.onrender.com/swagger-ui/index.html
-
-[![Deploy on Render](https://img.shields.io/badge/Render-deployed-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://acessly-api.onrender.com/swagger-ui/index.html)
-[![API Status](https://img.shields.io/badge/API-Online-success?style=for-the-badge)](https://acessly-api.onrender.com/swagger-ui/index.html)
 
 ## 👨‍💻 Dev Team
 
