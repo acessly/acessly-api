@@ -111,8 +111,8 @@ A API permite:
 
 | Relacionamento | Tipo | Implementação |
 |----------------|------|---------------|
-| User ↔ Company | 1:N | `@ManyToOne` em Company |
-| User ↔ Candidate | 1:1 | `@ManyToOne` em Candidate |
+| User ↔ Company | 1:1 | `@OneToOne` em Company |
+| User ↔ Candidate | 1:1 | `@@OneToOne` em Candidate |
 | Company ↔ Vacancy | 1:N | `@ManyToOne` em Vacancy |
 | Company ↔ CompanySupport | 1:N | `@ManyToOne` em CompanySupport |
 | Candidate ↔ Candidacy | 1:N | `@ManyToOne` em Candidacy |
