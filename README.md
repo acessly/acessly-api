@@ -726,8 +726,11 @@ Content-Type: application/json
 ## 🚀 Deploy on Render
 
 A API está hospedada via [Render](https://render.com).  
-> **Atenção:** Se a aplicação estiver inativa, ao acessar pode demorar cerca de **4-5 minutos** para iniciar (cold start).  
-> Acesse a documentação [Swagger UI](https://acessly-api.onrender.com/swagger-ui/index.html).
+> **Atenção:** Se a aplicação estiver inativa, ao acessar pode demorar cerca de **4-5 minutos** para iniciar (cold start).
+ 
+> Acesse a documentação da API hospedada no Swagger UI no link abaixo:
+
+🎓 https://acessly-api.onrender.com/swagger-ui/index.html
 
 [![Deploy on Render](https://img.shields.io/badge/Render-deployed-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://acessly-api.onrender.com/swagger-ui/index.html)
 [![API Status](https://img.shields.io/badge/API-Online-success?style=for-the-badge)](https://acessly-api.onrender.com/swagger-ui/index.html)
