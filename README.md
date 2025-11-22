@@ -825,6 +825,18 @@ Content-Type: application/json
 | PATCH /candidacies/{id}/status | ❌ | ✅ | ❌ |
 | DELETE /candidacies/{id} | ✅ | ❌ | ❌ |
 
+## 📹 Vídeo demonstração da solução completa
+
+> Clique no link abaixo para assistir no YouTube
+
+🔗 https://youtu.be/NFAM0ihVv9w?si=2ZZZkIpCN9-gH5Iu
+
+## 📹 Vídeo Pitch 
+
+> Clique no link abaixo para assistir no YouTube
+
+🔗 https://youtu.be/LmmE4yEzO6A?si=OSEf0FboGMQ6E6pH
+
 ## 👨‍💻 Dev Team
 
 | Dev | Avatar | RM |
